@@ -3,6 +3,7 @@ const router = express.Router();
 import userRouter from "../modules/user/user.routes";
 import authRouter from "../modules/auth/auth.routes";
 import eventRouter from "../modules/event/event.routes";
+import bookingRouter from "../modules/booking/booking.routes";
 import reviewRouter from "../modules/review/review.routes";
 const moduleRouter = [
   {
@@ -16,6 +17,10 @@ const moduleRouter = [
   {
     path: "/event",
     route: eventRouter,
+  },
+  {
+    path: "/booking",
+    route: bookingRouter,
   },
   {
     path: "/review",
