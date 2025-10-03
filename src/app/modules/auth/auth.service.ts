@@ -167,7 +167,7 @@ const updateUserProfileIntoDB = async (
   payload: Partial<TUser>
 ) => {
   let newProfile = payload;
-  if (file?.path && file?.fieldname) {
+  if (file?.path) {
     const { path } = file;
     // upload into cloudinary
     const upload_url = await uploadImageCloudinary(path?.buffer);
